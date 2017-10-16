@@ -3,7 +3,7 @@
 
 #define MAXLINES 5000
 
-char *lineptr[MAXLINES]; /* указатели на строки */
+char *lineptr[MAXLINES]; 
 int readlines(char *[], int);
 void writelines(char *[], int);
 void qsort(char *[], int, int);
@@ -12,7 +12,7 @@ int main()
 {
 	double start, end;
 	start = clock();
-	int nlines; /* количество прочитанных строк */
+	int nlines; 
 	if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
 		qsort(lineptr, 0, nlines - 1);
 		writelines(lineptr, nlines);
@@ -21,7 +21,7 @@ int main()
 		return 0;
 	}
 	else {
-		printf("ouin6Ka: слишком много строк\n");
+		printf("error\n");
 		return 1;
 	}
 }
@@ -31,7 +31,7 @@ int main()
 int getline(char *, int);
 char *alloc(int);
 
-/* readlines: чтение строк */
+
 int readlines(char *lineptr[], int maxlines)
 {
 	int len, nlines;
@@ -43,7 +43,7 @@ int readlines(char *lineptr[], int maxlines)
 		if (nlines >= maxlines || (p = alloc(len)) == NULL)
 			return -1;
 		else {
-			line[len - 1] = '\0'; /* убираем символ \n */
+			line[len - 1] = '\0'; 
 			strcpy(p, line);
 			lineptr[nlines++] = p;
 		}
@@ -51,7 +51,7 @@ int readlines(char *lineptr[], int maxlines)
 	return nlines;
 }
 
-/* getline: читает строку в s, возвращает длину */
+
 int getline(char s[], int lim)
 {
 	int c, i;
@@ -66,7 +66,7 @@ int getline(char s[], int lim)
 }
 
 
-/* writelines: печать строк */
+
 void writelines(char *lineptr[], int nlines)
 {
 	int i;
@@ -74,13 +74,12 @@ void writelines(char *lineptr[], int nlines)
 		printf("%s\n", lineptr[i]);
 }
 
-/* qsort: сортирует v[left]...v[right] по возрастанию */
 void qsort(char *v[], int left, int right)
 {
 	int i, last;
 	void swap(char *v[], int i, int j);
-	if (left >= right) /* ничего не делается, если в массиве */
-		return; /* менее двух элементов */
+	if (left >= right) 
+		return; 
 	swap(v, left, (left + right) / 2);
 	last = left;
 	for (i = left + 1; i <= right; i++)
@@ -91,7 +90,6 @@ void qsort(char *v[], int left, int right)
 	qsort(v, last + 1, right);
 }
 
-/* swap: поменять местами v[i] и v[j] */
 void swap(char *v[], int i, int j)
 {
 	char *temp;
@@ -103,20 +101,20 @@ void swap(char *v[], int i, int j)
 
 #define ALLOCSIZE 10000
 
-static char allocbuf[ALLOCSIZE]; /* память для alloc */
-static char *allocp = allocbuf; /* указатель на своб. место */
+static char allocbuf[ALLOCSIZE]; 
+static char *allocp = allocbuf; 
 
-char *alloc(int n) /* возвращает указатель на п символов */
+char *alloc(int n) 
 {
 	if (allocbuf + ALLOCSIZE - allocp >= n) {
-		allocp += n; /* пространство есть */
-		return allocp - n; /* старое р */
+		allocp += n; 
+		return allocp - n; 
 	}
-	else /* пространства нет */
+	else 
 		return 0;
 }
 
-void afree(char *p) /* освобождает память, на которую указывает р */
+void afree(char *p) 
 {
 	if (p >= allocbuf && p < allocbuf + ALLOCSIZE)
 		allocp = p;
