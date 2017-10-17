@@ -1,0 +1,29 @@
+﻿Сборка начата 08.09.2017 0:12:44.
+     1>Проект "C:\Users\Yuri\Documents\Visual Studio 2013\Projects\KERRIGAN_RITCHI_C\С_4.11\С_4.11\С_4.11.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt getch.c getop.c main_prog.c stack.c
+         stack.c
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\stack.c(2): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         main_prog.c
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\main_prog.c(19): warning C4047: функция: "int" отличается по уровням косвенного обращения от "char *"
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\main_prog.c(19): warning C4024: ungetch: различные типы для формального и фактического параметров 1
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\main_prog.c(47): warning C4013: modf: нет определения; предполагается "extern" с возвратом типа "int"
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\main_prog.c(72): warning C4013: strcmp: нет определения; предполагается "extern" с возвратом типа "int"
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\main_prog.c(73): warning C4013: sin: нет определения; предполагается "extern" с возвратом типа "int"
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\main_prog.c(75): warning C4013: exp: нет определения; предполагается "extern" с возвратом типа "int"
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\main_prog.c(79): warning C4013: pow: нет определения; предполагается "extern" с возвратом типа "int"
+         getop.c
+     1>c:\users\yuri\documents\visual studio 2013\projects\kerrigan_ritchi_c\с_4.11\с_4.11\getop.c(21): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+         getch.c
+         Создание кода...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yuri\Documents\Visual Studio 2013\Projects\KERRIGAN_RITCHI_C\С_4.11\Debug\С_4.11.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Yuri\Documents\Visual Studio 2013\Projects\KERRIGAN_RITCHI_C\С_4.11\Debug\С_4.11.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Yuri\Documents\Visual Studio 2013\Projects\KERRIGAN_RITCHI_C\С_4.11\Debug\С_4.11.lib" /MACHINE:X86 Debug\getch.obj
+         Debug\getop.obj
+         Debug\main_prog.obj
+         Debug\stack.obj
+         С_4.11.vcxproj -> C:\Users\Yuri\Documents\Visual Studio 2013\Projects\KERRIGAN_RITCHI_C\С_4.11\Debug\С_4.11.exe
+     1>Сборка проекта "C:\Users\Yuri\Documents\Visual Studio 2013\Projects\KERRIGAN_RITCHI_C\С_4.11\С_4.11\С_4.11.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:00.86
