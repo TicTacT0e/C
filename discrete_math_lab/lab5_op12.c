@@ -1,6 +1,9 @@
 #include "stdio.h"
 #include "malloc.h"
 
+/*Develop an algorithm for converting an incidence list 
+ *into a list of pairs for undirected graph.*/
+
 void incListInput(int**, int);
 void incListOutput(int**, int);
 
