@@ -79,7 +79,8 @@ void incList_to_pairList(int **incList, int tops)
 	{
 		for (int j = 0; j < incSize; j++)
 		{
-			addPair(i + 1, incList[i][j]); 
+			if (incList[i][j] != 0)
+				addPair(i + 1, incList[i][j]);
 		}
 	}
 }
