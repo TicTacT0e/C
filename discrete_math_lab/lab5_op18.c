@@ -47,6 +47,15 @@ main() {
     pairList_to_adjMatrix(pairList, ribs, adjMatrix);
     printf("\tYOUR ADJACENCY MATRIX\n");
     matOutput(adjMatrix, tops, tops);
+
+    for (int i = 0; i < ribs; i++) {
+        free(pairList[i]);
+    }
+    free(pairList);
+    for (int i = 0; i < tops; i++) {
+        free(adjMatrix[i]);
+    }
+    free(adjMatrix);
 }
 
 void pairList_to_adjMatrix(int** pairList, int x, int** adjMatrix)
