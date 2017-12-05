@@ -12,7 +12,7 @@ main() //главная функция main
 {
     //------//инициализация переменной содержащей количество вершин//------//
     int tops;
-    printf("Enter number of tops = ");
+    printf("Enter number of tops (only integer digit) = ");
     scanf("%d", &tops);
     //------//
 
@@ -145,6 +145,7 @@ void adjMat_to_incMat(int **adjMat, int **incMat, int tops, int ribs)
 //------//ввод матрицы смежности
 void adjMat_input(int **adjMat, int tops)
 {
+    printf("Enter only(!!!!) 0 or 1\n");
     for (int i = 0; i < tops; i++)
     {
         for (int j = 0; j < tops; j++)
