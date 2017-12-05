@@ -11,6 +11,8 @@ void matInput(int **, int, int);
 
 void matOutput(int **, int, int);
 
+void pairListOutput(int **, int, int);
+
 void incMatrix_to_pairList(int **, int, int, int **);
 
 void pairListClean(int **, int **, int);
@@ -60,16 +62,9 @@ main() {
 
     incMatrix_to_pairList(incMatrix, tops, ribs, bufPairList);
 
-    for (int i = 0; i < bufList; i++) {
-        for (int j = 0; j < 2; j++) {
-            printf("%d ", bufPairList[i][j]);
-        }
-        printf("\n");
-    }
-
     pairListClean(pairList, bufPairList, bufList);
-    printf("\n\tYOUR INCIDENCE MATRIX\n");
-    matOutput(pairList, ribs, 2);
+    printf("\n\tYOUR PAIR LIST\n");
+    pairListOutput(pairList, ribs, 2);
 
 
     for (int i = 0; i < tops; i++) {
@@ -95,8 +90,6 @@ void incMatrix_to_pairList(int **incMatrix, int tops, int ribs, int **bufPairLis
     if (ribs % 2 != 0) {
         midColums = ribs / 2;
     } else midColums = ribs / 2;
-
-    printf("midColums - %d\n\n", midColums);
 
     if (tops == ribs) {
         for (int i = 0; i < tops; i++) {
@@ -126,8 +119,6 @@ void incMatrix_to_pairList(int **incMatrix, int tops, int ribs, int **bufPairLis
             midRows = tops / 2;
         } else midRows = tops / 2;
 
-        printf("midRows - %d\n\n", midRows);
-
         for (int i = 0; i < midRows; i++) {
             for (int j = 0; j < ribs; j++) {
                 if (incMatrix[i][j] == 1 && j < midColums) {
@@ -156,8 +147,6 @@ void incMatrix_to_pairList(int **incMatrix, int tops, int ribs, int **bufPairLis
         } else midRows = tops / 2;
 
         int temp = ribs - tops;
-
-        printf("midRows - %d\n\n", midRows);
 
         for (int i = 0; i < midRows; i++) {
             for (int j = 0; j < ribs; j++) {
@@ -208,11 +197,20 @@ void matInput(int **mat, int x, int y) {
     }
 }
 
-void matOutput(int **mat, int x, int y) {
+void pairListOutput(int **mat, int x, int y) {
     for (int i = 0; i < x; i++) {
         for (int j = 0; j < y; j++) {
             if ((mat[i][j] == 0) && (mat[i][j+1] == 0))
                 break;
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void matOutput(int **mat, int x, int y) {
+    for (int i = 0; i < x; i++) {
+        for (int j = 0; j < y; j++) {
             printf("%d ", mat[i][j]);
         }
         printf("\n");
