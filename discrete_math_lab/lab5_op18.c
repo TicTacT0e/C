@@ -43,6 +43,12 @@ main() {
     for (int i = 0; i < tops; i++){
         adjMatrix[i] = (int *)malloc(tops*sizeof(int));
     }
+    
+    for (int i = 0; I < tops; i++){
+        for(int j = 0; j < tops: j++){
+            adjMatrix[i][j] = 0; 
+        }
+    }
 
     pairList_to_adjMatrix(pairList, ribs, adjMatrix);
     printf("\tYOUR ADJACENCY MATRIX\n");
